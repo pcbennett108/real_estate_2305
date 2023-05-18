@@ -7,6 +7,8 @@ attr_reader :category, :length, :width
     @width = width
   end
 
+  def area
+    length * width.to_i
+  end
 
-  
 end
