@@ -1,4 +1,5 @@
 require './lib/room'
+#require "pry" ; binding.pry
 
 RSpec.describe Room do
   describe "Iteration 1" do
@@ -25,8 +26,8 @@ RSpec.describe Room do
       room1 = Room.new(:bedroom, 10, '13')
       room2 = Room.new(:living_room, 15, '12')
 
-      expect(room1.is_painted?).to be_false
-      expect(room2.is_painted?).to be_false
+      expect(room1.is_painted?).to eq(false)
+      expect(room2.is_painted?).to eq(false)
 
     end
 
@@ -34,14 +35,14 @@ RSpec.describe Room do
       room1 = Room.new(:bedroom, 10, '13')
       room2 = Room.new(:living_room, 15, '12')
 
-      expect(room1.is_painted?).to be_false
-      expect(room2.is_painted?).to be_false
+      expect(room1.is_painted?).to eq(false)
+      expect(room2.is_painted?).to eq(false)
       
       room1.paint
       room2.paint
       
-            expect(room1.is_painted?).to be_true
-            expect(room2.is_painted?).to be_true
+      expect(room1.is_painted?).to eq(true)
+      expect(room2.is_painted?).to eq(true)
     end
 
 
