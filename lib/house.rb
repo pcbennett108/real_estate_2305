@@ -19,5 +19,11 @@ attr_reader :price, :address, :rooms
     rooms.select { |room| room.category == category}
   end
 
+  def details
+    details = {}
+    details["price"] = price.gsub("$", "").to_i
+    details["address"] = address
+    details
+  end
 
 end

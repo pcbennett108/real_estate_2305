@@ -59,13 +59,18 @@ RSpec.describe House do
 
       expect(house.rooms_from_category(:bedroom))
       .to eq([room_1, room_2])
+
       expect(house.rooms_from_category(:basement))
       .to eq([room_4])
       # It seemed like these lines should be broken up, but where?
     end
 
+    it "create a hash of house details" do
+      house = House.new("$400000", "123 sugar lane")
 
+      expect(house.details)
+      .to eq({"price" => 400000, "address" => "123 sugar lane"})
+    end
 
   end
-
 end
