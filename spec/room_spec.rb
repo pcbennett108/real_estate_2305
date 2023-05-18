@@ -31,7 +31,7 @@ RSpec.describe Room do
 
     end
 
-    xit "can paint the room" do
+    it "can paint the room" do
       room1 = Room.new(:bedroom, 10, '13')
       room2 = Room.new(:living_room, 15, '12')
 
