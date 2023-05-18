@@ -36,10 +36,17 @@ RSpec.describe House do
 
       expect(house.rooms).to eq([room_1, room_2])
     end
+  end
 
-    
+  describe "Iteration 2" do
+    it "can imform market average" do
+      house = House.new("$400000", "123 sugar lane")
+
+      expect(house.above_market_average?).to eq(false)
+    end
 
 
 
   end
+
 end
